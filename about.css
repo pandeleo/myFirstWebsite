@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+body {
+    background: rgba(0,0,0,0.75) url(photos/aboveview.webp);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+ }
+
+
+/* --------------------- NAVBAR ------------ */
+
+nav { 
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #fff;
+    font-family: 'Barlow', sans-serif;
+    border-bottom: 1px solid black;
+    top: 20px;
+}
+
+img {
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #090909;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: rgb(215, 34, 34);
+}
+
+.nav-links li:hover {
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+}
+
+.fa-solid {
+    padding-right: 5px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #090909;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links {
+        width: 70%;
+    }
+ }
+
+ @media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+nav {
+    top: 0;
+}
+
+    .nav-links{
+        position: fixed;
+        right: 0;
+        height: 92vh;
+        top:8vh;
+        background-color: #fff;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-links li:hover{
+        transform: translateY(-10px);
+        transition: all ease 0.4s;
+    }
+
+    .burger {
+        display: block;
+    }
+
+ }
+
+ .nav-active {
+    transform: translateX(0%);
+ }
+
+
+.to .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.to .line2{
+    opacity: 0;
+}
+
+.to .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+
+
+
+/*-------------------------------- ABOUT BOX ------ */
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3) url(photos/ssr-brandvan.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    padding: 50px;
+    background-color: rgba(23, 12, 12, 0.8);
+    box-shadow: 2px 2px 20px rgba(226,226,226, 0.9);
+}
+
+.about-box h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.about-box p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+   
+    .about-box {
+        width: 450px;
+        height: 400px;
+        margin: 10px;
+        background-color: rgba(33, 32, 32, 0.9);
+        box-shadow: 2px 2px 20px rgba(226,226,226, 0.9);
+    }
+    .about-box h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-box p {
+        font-size: 14px;
+    }
+}
+
+
+/*------------------------------- Experience Box ----- */
+
+
+#experience-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #dfdfe2;
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.experience-list h3 {
+    font-size: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.experience-list h3:hover{
+    transform: translateY(-10px);
+    transition: all ease 1s;
+}
+.experience-list span {
+    color: rgb(215, 34, 34);
+    font-size: 1rem;
+    padding-left: 30px;
+}
+
+@media screen and (max-width:768px) {
+#experience-box {
+    padding: 20px;
+    margin: 0;
+}
+
+    .experience-list h3 {
+        font-size: 20px;
+    }
+
+    .experience-list span {
+        font-size: 10px;
+        padding: 0;
+    }
+
+}
+
+/*-----------------------------------REVIEWS BOX--------------*/
+
+#testimonials {
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.testimonial-heading {
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #202020;
+    color:#fff;
+    padding: 10px 20px;
+}
+
+.testimonial-heading span {
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+    color: #f6f6f6;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.testimonial-box-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial-box {
+    width: 400px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong {
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.reviews{
+    color: #f9d71c;
+}
+
+.box-top{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.client-comments {
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1060px){
+    .testimonial-box{
+        width: 45%;
+        padding: 10px;
+
+    }
+}
+@media(max-width:790px){
+    .testimonial-box{
+        width: 100%;
+    }
+    .testimonal-heading h1 {
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top:10px;
+    }
+}
+::selection {
+    color:#fff;
+    background-color: #252525;
+}
+
+
+/*------------------------------------START-24/7-BOX----------*/
+
+.box247 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0px ;
+    background-color: #dfdfe2;
+}
+
+.box247 h2 i {
+    font-size: 50px; 
+    padding: 10px;
+}
+
+.box247 span {
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.box247 p {
+    font-size: 3rem;
+}
+
+
+/*--------------------------------------STRENGHTS-BOX---------------------*/
+#strenghts-box {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.strenghts-left { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(0,0,0,0.8);
+    color: #fff;
+}
+
+
+.strenghts-left .text h2{
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+.strenghts-left .text .fa-solid {
+    font-size: 1rem;
+}
+
+.strenghts-left .text .fa-star{
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+
+.strenghts-right img {
+   width: 400px;
+   height: 400px;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    #strenghts-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .strenghts-left{
+        margin-bottom: 20px;
+    }
+
+    .strenghts-left .text {
+        font-size: 12px;
+    }
+}
+
+
+
+
+/*-----------------------------FOOOTER----------------------*/
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #dfdfe2;
+    padding: 30px 0px;
+}
+
+
+.media-box ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.media-box ul li {
+    font-size: 30px;
+    padding: 20px;
+}
+.media-box .fa-brands:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+    color: #e90d0d;
+}
+.media-box ul .fa-facebook {
+    color: #3b5988;
+}
+
+.media-box ul .fa-twitter {
+    color: #00acee;
+}
+
+.media-box ul .fa-square-instagram {
+    color: #3f729b ;
+}
+
+.address-box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.address-box ul li{
+    list-style: none;
+    
+}
+
+.address-box ul .business-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.address-box ul li .fa-solid {
+    color: #e90d0d;
+    padding-left: 5px;
+}
+
+.address-box ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.address-box ul li:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+    color: #e90d0d;
+}
+
+
+@media screen and (max-width:768px) {
+    #footer {
+        display: block;
+    }
+
+    .media-box { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+}
